@@ -63,16 +63,19 @@ export default function Home() {
             </Text>
             e aceito todos eles.
           </Text>
-        </View></>
+        </View>
+        
+        <View style={styles.containerButton}>
+          <Button title="Cadastrar-se" onPress={handleSubmit} />
+        </View>
+        </>
 
   )
 }
 
       
 
-        <View style={styles.containerButton}>
-          <Button title="Cadastrar-se" onPress={handleSubmit} />
-        </View>
+        
         </Formik>
   
       </View>
