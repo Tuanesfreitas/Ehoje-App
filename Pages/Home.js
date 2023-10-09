@@ -1,12 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Flatlist, SafeAreaView } from 'react-native';
+
+const data=[
+  {nome:'Bruno', tipoSanguineo:'AB+'}
+]
 
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <SafeAreaView>
+        <Flatlist
+        data={data}
+        renderItem={({item})=> <Card nome={item.nome} tipoSanguineo={item.tipoSanguineo}/>}
+        keyExtractor={ ({item})=> item.id}
+        />
+        </SafeAreaView> 
+    
     </View>
+
   );
 }
 
